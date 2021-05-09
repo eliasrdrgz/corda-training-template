@@ -31,37 +31,37 @@ public class IOUStateTests {
      * Hint: {@link Amount} is a template class that takes a class parameter of the token you would like an {@link Amount} of.
      * As we are dealing with cash lent from one Party to another a sensible token to use would be {@link Currency}.
      */
-//    @Test
-//    public void hasIOUAmountFieldOfCorrectType() throws NoSuchFieldException {
-//        // Does the amount field exist?
-//        Field amountField = IOUState.class.getDeclaredField("amount");
-//        // Is the amount field of the correct type?
-//        assertTrue(amountField.getType().isAssignableFrom(Amount.class));
-//    }
+   @Test
+   public void hasIOUAmountFieldOfCorrectType() throws NoSuchFieldException {
+       // Does the amount field exist?
+       Field amountField = IOUState.class.getDeclaredField("amount");
+       // Is the amount field of the correct type?
+       assertTrue(amountField.getType().isAssignableFrom(Amount.class));
+   }
 
     /**
      * Task 2.
      * TODO: Add a 'lender' property of type {@link Party} to the {@link IOUState} class to get this test to pass.
      */
-//    @Test
-//    public void hasLenderFieldOfCorrectType() throws NoSuchFieldException {
-//        // Does the lender field exist?
-//        Field lenderField = IOUState.class.getDeclaredField("lender");
-//        // Is the lender field of the correct type?
-//        assertTrue(lenderField.getType().isAssignableFrom(Party.class));
-//    }
+   @Test
+   public void hasLenderFieldOfCorrectType() throws NoSuchFieldException {
+       // Does the lender field exist?
+       Field lenderField = IOUState.class.getDeclaredField("lender");
+       // Is the lender field of the correct type?
+       assertTrue(lenderField.getType().isAssignableFrom(Party.class));
+   }
 
     /**
      * Task 3.
      * TODO: Add a 'borrower' property of type {@link Party} to the {@link IOUState} class to get this test to pass.
      */
-//    @Test
-//    public void hasBorrowerFieldOfCorrectType() throws NoSuchFieldException {
-//        // Does the borrower field exist?
-//        Field borrowerField = IOUState.class.getDeclaredField("borrower");
-//        // Is the borrower field of the correct type?
-//        assertTrue(borrowerField.getType().isAssignableFrom(Party.class));
-//    }
+   @Test
+   public void hasBorrowerFieldOfCorrectType() throws NoSuchFieldException {
+       // Does the borrower field exist?
+       Field borrowerField = IOUState.class.getDeclaredField("borrower");
+       // Is the borrower field of the correct type?
+       assertTrue(borrowerField.getType().isAssignableFrom(Party.class));
+   }
 
     /**
      * Task 4.
@@ -75,34 +75,34 @@ public class IOUStateTests {
      *   [IOUState.amount] property. You can create an instance of the {@link Amount} class that takes a zero value and a token
      *   representing the currency - which should be the same currency as the [IOUState.amount] property.
      */
-//    @Test
-//    public void hasPaidFieldOfCorrectType() throws NoSuchFieldException {
-//        // Does the paid field exist?
-//        Field paidField = IOUState.class.getDeclaredField("paid");
-//        // Is the paid field of the correct type?
-//        assertTrue(paidField.getType().isAssignableFrom(Amount.class));
-//    }
+   @Test
+   public void hasPaidFieldOfCorrectType() throws NoSuchFieldException {
+       // Does the paid field exist?
+       Field paidField = IOUState.class.getDeclaredField("paid");
+       // Is the paid field of the correct type?
+       assertTrue(paidField.getType().isAssignableFrom(Amount.class));
+   }
 
     /**
      * Task 5.
      * TODO: Include the lender within the {@link IOUState#getParticipants()} list
      * Hint: [Arrays.asList()] takes any number of parameters and will add them to the list
      */
-//    @Test
-//    public void lenderIsParticipant() {
-//        IOUState iouState = new IOUState(Currencies.POUNDS(0), ALICE.getParty(), BOB.getParty());
-//        assertNotEquals(iouState.getParticipants().indexOf(ALICE.getParty()), -1);
-//    }
+   @Test
+   public void lenderIsParticipant() {
+       IOUState iouState = new IOUState(Currencies.POUNDS(0), ALICE.getParty(), BOB.getParty());
+       assertNotEquals(iouState.getParticipants().indexOf(ALICE.getParty()), -1);
+   }
 
     /**
      * Task 6.
      * TODO: Similar to the last task, include the borrower within the [IOUState.participants] list
      */
-//    @Test
-//    public void borrowerIsParticipant() {
-//        IOUState iouState = new IOUState(Currencies.POUNDS(0), ALICE.getParty(), BOB.getParty());
-//        assertNotEquals(iouState.getParticipants().indexOf(BOB.getParty()), -1);
-//    }
+   @Test
+   public void borrowerIsParticipant() {
+       IOUState iouState = new IOUState(Currencies.POUNDS(0), ALICE.getParty(), BOB.getParty());
+       assertNotEquals(iouState.getParticipants().indexOf(BOB.getParty()), -1);
+   }
 
     /**
      * Task 7.
